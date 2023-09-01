@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+@import url(http://fonts.googleapis.com/earlyaccess/khyay.css);
+
+body {
+  margin: 0;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+header {
+  height: 500px;
+  letter-spacing: 3px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.712),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+header .container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+header .container1 {
+  padding: 5px;
+  font-size: 18px;
+}
+
+header .container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 5px;
+  width: 100%;
+}
+
+header a {
+  font-family: "Marvel";
+  text-decoration: none;
+  font-weight: 100;
+  font-style: normal;
+  color: black;
+}
+
+#jp {
+  font-family: "Klee One", cursive;
+  letter-spacing: 0px;
+  padding: 5px 20px 0px 20px;
+}
+
+.drop-down {
+  font-size: 20px;
+}
+
+.quote {
+  max-width: 1280px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.p1 {
+  font-size: 25px;
+  padding: 30px;
+  margin: 0;
+  font-family: "marvel";
+  font-size: 14px;
+  z-index: 9;
+  position: absolute;
+  left: 0;
+}
+
+.p2 {
+  font-size: 20px;
+  padding: 30px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "marvel";
+  font-size: 14px;
+
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 5px 15px; */
+  /* background-color: rgb(96, 124, 124); */
+  justify-content: space-between;
+}
+
+.home {
+  width: 70%;
+  padding: 15px 15px;
+  height: 200vh;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 15px 15px;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+}
+
+/* Namecard */
+.namecard {
+  /* background-color: #1f1e33; */
+  height: 240px;
+  background: rgba(200, 182, 214, 0.33);
+  box-shadow: 0px 4px 10px 2px rgba(146, 143, 198, 0.5);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.namecardsecondlayer {
+  height: 100px;
+  background-color: #1f1e33;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.namecardthirdlayer {
+  height: 130px;
+  width: 93.75%;
+  background-color: #fff;
+  margin: 0px 0px 10px 10px;
+  z-index: 0;
+}
+
+.image {
+  width: 87px;
+  height: 87px;
+  flex-shrink: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.containeri {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.content {
+  position: relative;
+  width: 320px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Post  */
+.post {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(2, 0, 114, 0.5);
+  height: 215px;
+  margin-bottom: 50px;
+}
+.post .titlebar {
+  display: flex;
+  flex-direction: row;
+  /* background-color: #a4dd7586; */
+  padding: 30px;
+  padding-bottom: 0px;
+}
+.post .tagline {
+  width: 1%;
+  background: #928fc6;
+  height: 30px;
+  min-width: 3px;
+}
+.post .tag {
+  width: 12%;
+  background: rgba(172, 168, 245, 0.692);
+  height: 30px;
+  min-width: 50px;
+}
+.post h1 {
+  font-size: 1.3rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Khyay", sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  padding-top: 3px;
+}
+.post .title {
+  font-size: 1.6rem;
+  width: 80%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 30px;
+  color: #683daf;
+  font-family: Marvel;
+}
+.post .body {
+  padding: 30px;
+  padding-top: 20px;
+  padding-right: 60px;
+  padding-bottom: 0px;
+  font-size: 1.2rem;
+  font-family: Marvel;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.808);
+}
+.post .data {
+  position: relative;
+  padding: 30px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.post .data h2 {
+  padding-left: 8px;
+  font-family: Marvel;
+  color: rgba(0, 0, 0, 0.31);
+  font-size: 1.2rem;
+  width: auto;
+  margin: 0;
+  padding-right: 30px;
+}
+
+/* dropdown  */
+.menu {
+  position: absolute;
+  list-style-type: none;
+  margin: 0 0;
+  padding: 0;
+  width: 130px;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.534);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.open {
+  height: auto;
+  padding: 0 0;
+}
+
+.menu.open2 {
+  height: auto;
+  padding: 0 0;
+}
+
+.menu button {
+  width: 100%;
+  text-align: center;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 15px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Marvel";
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.menu button:hover {
+  background-color: rgba(26, 16, 48, 0.062);
+}
+
+/* Search Bar  */
+.searchbar {
+  background: rgba(200, 182, 214, 0.33);
+  box-shadow: 0px 4px 10px 2px rgba(146, 143, 198, 0.5);
+  height: 4rem;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar input{
+  border: 0px;
+  height: 60%;
+  padding: 0px;
+  width: 60%;
+  box-sizing: border-box;
+  font-family: Marvel;
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+.searchbar input:focus{
+  border: 1px solid #928fc68c;
+  outline: none;
+}
+.searchbar input::placeholder{
+  font-family: Marvel;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.342);
+  
+}
+.searchbar input::selection {
+  background-color: rgba(200, 182, 214, 0.568);
+  color: #000;
+}
+.searchbar button{
+  border: 0px;
+  height: 60%;
+  background: #C8B6D6;
+  color: #fff;
+  font-family: Marvel;
+  width: 5rem;
+  font-size: 1.4rem;
+}
+.searchbar button:hover{
+  background: #b09bc0;
+}
+

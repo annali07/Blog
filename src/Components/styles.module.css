@@ -1,0 +1,53 @@
+/* NavBar Styling */
+.mainmenu {
+  margin: 3px 0px;
+  pad: 0px 16px;
+}
+
+.navmenu {
+  margin: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navmenu2 {
+  margin: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navmenu::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 0.15rem;
+  border-radius: 40px;
+  background: #1f1e33;
+  left: 25px;
+  bottom: 5px;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navmenu2::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 0.15rem;
+  border-radius: 30%;
+  background: #1f1e33;
+  left: 32px;
+  bottom: -5px;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navmenu:hover::after{
+  transform:scale(1,1)
+}
+
+.navmenu2:hover::after{
+  transform:scale(1,1)
+}
+
+
