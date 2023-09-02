@@ -1,11 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
 @import url(http://fonts.googleapis.com/earlyaccess/khyay.css);
+::-webkit-scrollbar {
+  width: 0.5vw; /* Width of the scrollbar */
+  background-color: rgba(200, 182, 214, 0.33); /* Background color of the scrollbar track */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #72658fb6; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners of the scrollbar thumb */
+}
+
+/* Customize the scrollbar track when the mouse hovers over it */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #403e68;
+  
+}
+
+/* Customize the scrollbar track when it's in a "pressed" state (clicking and holding the thumb) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #1f1e33;
+}
 
 body {
   margin: 0;
   text-decoration: none;
   font-size: 13px;
+}
+
+body ::selection{
+  background-color: rgba(181, 158, 199, 0.568);
 }
 
 header {
@@ -205,7 +230,7 @@ header a {
   height: 30px;
   min-width: 50px;
 }
-.post h1 {
+.post button {
   font-size: 1.3rem;
   margin: 0;
   display: flex;
@@ -216,7 +241,17 @@ header a {
   font-weight: lighter;
   color: #fff;
   padding-top: 3px;
+  background-color: #00000000;
+  border: none;
+  width: 100%;
+  transition: background-color 0.5s ease-in-out
 }
+
+.post .tag button:hover{
+  background-color: #2c2b49;
+  transition: background-color 0.5s ease-in-out;
+}
+
 .post .title {
   font-size: 1.6rem;
   width: 80%;
@@ -227,7 +262,16 @@ header a {
   height: 30px;
   color: #683daf;
   font-family: Marvel;
+  border: none;
+  background-color:#00000000;
+  transition: color 0.5s;
 }
+.post .title:hover{
+  color: #cfc2e5;
+  transition: color 0.5s;
+}
+
+
 .post .body {
   padding: 30px;
   padding-top: 20px;
@@ -315,11 +359,13 @@ header a {
   border: 0px;
   height: 60%;
   padding: 0px;
-  width: 60%;
+  width: 65%;
   box-sizing: border-box;
   font-family: Marvel;
   padding-left: 10px;
   font-size: 1.2rem;
+  border-top-left-radius: 15px; /* Round the top-left corner */
+  border-bottom-left-radius: 15px; /* Round the bottom-left corner */
 }
 .searchbar input:focus{
   border: 1px solid #928fc68c;

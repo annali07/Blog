@@ -12,6 +12,8 @@ export default function Header() {
     flexShrink: 0,
     backgroundSize: "cover",
     backgroundPosition: "center",
+
+    
   };
 
   return (
