@@ -8,7 +8,7 @@ export default function Header({ f }) {
 
   const headerStyle = {
     backgroundImage: `url(${c})`,
-    height: "800px",
+    height: "40rem",
     flexShrink: 0,
     backgroundSize: "cover",
     backgroundPosition: "center",

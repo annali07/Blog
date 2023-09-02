@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Header from "./Components/Header";
 import About from "./pages/About";
 import Namecard from "./Components/Namecard";
 import Searchbar from "./Components/Searchbar";
+import Footer from "./Components/Footer";
 
 function App() {
   const [heading, setHeading] =useState("Home")
@@ -37,6 +38,7 @@ function App() {
             <Searchbar f={getHeading}/>
           </div>
         </div>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

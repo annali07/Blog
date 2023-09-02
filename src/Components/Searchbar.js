@@ -32,7 +32,6 @@ export default function Searchbar({f}) {
 
   function handleKeyPress(e) {
     if (e.key === "Enter") {
-      // Trigger the button click event when Enter key is pressed
       searchHandler(e);
     }
   }
