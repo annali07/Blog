@@ -1,23 +1,41 @@
-import { useRef, useState} from "react";
+import { useRef, useState, useEffect } from "react";
 
-export default function Searchbar() {
+export default function Searchbar(props) {
   const inputRef = useRef();
-  const [query, setQuery] = useState([])
+  const [query, setQuery] = useState("");
 
   function searchHandler(e) {
     e.preventDefault();
-    const value = inputRef.current.value
-    if (value === "") return;
-    setQuery(value);
+    const value = inputRef.current.value;
+    fetchData(value);
     inputRef.current.value = "";
-    console.log(value)
   }
 
-  // const filteredItems = items.filter(item=> {
-  //   return item.toLowerCase().includes(query.toLowerCase())
-  // })
+  const fetchData = (value) => {
+    //filter this on the backend
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((json) => {
+        // console.log(json)
+        const results = json.filter((user) => {
+          return (
+            value &&
+            user &&
+            user.name &&
+            user.name.toLowerCase().includes(value)
+          );
+        });
+        console.log(results);
+        props.function("Search Results");
+      });
+  };
 
-
+  function handleKeyPress(e) {
+    if (e.key === "Enter") {
+      // Trigger the button click event when Enter key is pressed
+      searchHandler(e);
+    }
+  }
 
   return (
     <div className="searchbar">
@@ -25,6 +43,7 @@ export default function Searchbar() {
         ref={inputRef}
         type="text"
         placeholder="type something..."
+        onKeyDown={handleKeyPress}
       ></input>
       <button onClick={searchHandler}>SEARCH</button>
     </div>

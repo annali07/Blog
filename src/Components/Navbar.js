@@ -13,18 +13,33 @@ const Navbar = (props) => {
     // animationFillMode: "forwards",
   };
 
+  
+  function onPress(){
+    props.head("Home")
+  }
+  function onPress2(){
+    props.head("About")
+  }
+  function onPress3(){
+    props.head("Journals")
+  }
+  function onPress4(){
+    props.head("Books")
+  }
+
+
   return (
     <header>
       <div className="container">
 
         <div className="container1">
-          <Link to="/" style={{ color: props.color }}>
+          <Link to="/" style={{ color: props.color }} onClick={onPress}>
             <h1 className={styles.mainmenu}>Nana♡Blog</h1>
           </Link>
         </div>
 
         <div className="container2">
-          <Link to="/" style={{ color: props.color }}>
+          <Link to="/" style={{ color: props.color }} onClick={onPress}>
             <h1 className={styles.navmenu}>Home</h1>
           </Link>
 
@@ -76,8 +91,8 @@ const Navbar = (props) => {
               className={`menu ${open2 ? "open2" : ""}`}
               style={open2 ? dropdownMenuAnimation : {}}
             >
-              <button className="button">Journals</button>
-              <button>Books</button>
+              <button className="button"  onClick={onPress3}>Journals</button>
+              <button onClick={onPress4}>Books</button>
             </div>
             <style>
               {`
@@ -96,7 +111,7 @@ const Navbar = (props) => {
             </style>
           </div>
 
-          <Link to="/about" style={{ color: props.color }}>
+          <Link to="/about" style={{ color: props.color }} onClick={onPress2}>
             <h1 className={styles.navmenu}>About</h1>
           </Link>
           <Link style={{ color: props.color }}>

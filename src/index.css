@@ -4,6 +4,10 @@
 ::-webkit-scrollbar {
   width: 0.5vw; /* Width of the scrollbar */
   background-color: rgba(200, 182, 214, 0.33); /* Background color of the scrollbar track */
+  /* display:none; */
+  border: none;
+  padding: none;
+  margin: none;
 }
 
 /* Customize the scrollbar thumb (the draggable part) */
@@ -23,10 +27,14 @@
   background-color: #1f1e33;
 }
 
+
+
 body {
   margin: 0;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 0.8rem;
+  padding: none;
+  border: none;
 }
 
 body ::selection{
@@ -93,8 +101,12 @@ header a {
   position: relative;
 }
 
+.quote p{
+  font-size: 1rem;
+}
+
 .p1 {
-  font-size: 25px;
+  font-size: 1.4rem;
   padding: 30px;
   margin: 0;
   font-family: "marvel";
@@ -230,7 +242,7 @@ header a {
   height: 30px;
   min-width: 50px;
 }
-.post button {
+.post .tag button {
   font-size: 1.3rem;
   margin: 0;
   display: flex;
@@ -240,7 +252,7 @@ header a {
   font-family: "Khyay", sans-serif;
   font-weight: lighter;
   color: #fff;
-  padding-top: 3px;
+  padding-top: 6px;
   background-color: #00000000;
   border: none;
   width: 100%;
