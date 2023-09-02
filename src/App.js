@@ -8,15 +8,18 @@ import Searchbar from "./Components/Searchbar";
 
 function App() {
   const [heading, setHeading] =useState("Home")
+
+
   const getHeading=(e)=>{
     setHeading(e)
+     
   }
 
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Header function={getHeading} />
+        <Header f={getHeading} />
        
         <div className="quote">
           <p className="p1">-------{heading}</p>
@@ -31,7 +34,7 @@ function App() {
           <div className="sidebar">
             <Namecard />
             <div style={{padding: '40px'}}/>
-            <Searchbar function={getHeading}/>
+            <Searchbar f={getHeading}/>
           </div>
         </div>
       </BrowserRouter>

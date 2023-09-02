@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useState } from "react";
 
-const Navbar = (props) => {
+const Navbar = ({head}) => {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
 
@@ -15,16 +15,16 @@ const Navbar = (props) => {
 
   
   function onPress(){
-    props.head("Home")
+   head("Home")
   }
   function onPress2(){
-    props.head("About")
+    head("About")
   }
   function onPress3(){
-    props.head("Journals")
+    head("Journals")
   }
   function onPress4(){
-    props.head("Books")
+    head("Books")
   }
 
 
@@ -33,13 +33,13 @@ const Navbar = (props) => {
       <div className="container">
 
         <div className="container1">
-          <Link to="/" style={{ color: props.color }} onClick={onPress}>
+          <Link to="/" style={{ color: "black" }} onClick={onPress}>
             <h1 className={styles.mainmenu}>Nana♡Blog</h1>
           </Link>
         </div>
 
         <div className="container2">
-          <Link to="/" style={{ color: props.color }} onClick={onPress}>
+          <Link to="/" style={{ color: "black" }} onClick={onPress}>
             <h1 className={styles.navmenu}>Home</h1>
           </Link>
 
@@ -48,7 +48,7 @@ const Navbar = (props) => {
             onMouseLeave={() => setOpen(false)}
             className={`dropdown ${open ? "open" : ""}`}
           >
-            <Link style={{ color: props.color }} className="navmenu">
+            <Link style={{ color: "black" }} className="navmenu">
               <h1 className={styles.navmenu}>
                 Codes<span className="drop-down">▽</span>
               </h1>
@@ -82,7 +82,7 @@ const Navbar = (props) => {
             onMouseLeave={() => setOpen2(false)}
             className={`dropdown ${open2 ? "open2" : ""}`}
           >
-            <Link style={{ color: props.color }} className="navmenu">
+            <Link style={{ color: "black" }} className="navmenu">
               <h1 className={styles.navmenu}>
                 Shelf<span className="drop-down">▽</span>
               </h1>
@@ -111,10 +111,10 @@ const Navbar = (props) => {
             </style>
           </div>
 
-          <Link to="/about" style={{ color: props.color }} onClick={onPress2}>
+          <Link to="/about" style={{ color: "black" }} onClick={onPress2}>
             <h1 className={styles.navmenu}>About</h1>
           </Link>
-          <Link style={{ color: props.color }}>
+          <Link style={{ color: "black" }}>
             <h1 id="jp" className={styles.navmenu2}>
               素晴らしき日々
             </h1>

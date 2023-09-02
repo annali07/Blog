@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 // import b from "../images/banner2.png";
 import c from "../images/m.jpeg"
 
-export default function Header(props) {
+export default function Header({ f }) {
 
   const headerStyle = {
     backgroundImage: `url(${c})`,
@@ -19,7 +19,7 @@ export default function Header(props) {
   return (
     <div>
       <div style={headerStyle}>
-        <Navbar head={props.function} color={"black"} />
+        <Navbar head={f} color={"black"} />
       </div>
     </div>
   );

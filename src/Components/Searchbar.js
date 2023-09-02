@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-export default function Searchbar(props) {
+export default function Searchbar({f}) {
   const inputRef = useRef();
   const [query, setQuery] = useState("");
 
@@ -26,7 +26,7 @@ export default function Searchbar(props) {
           );
         });
         console.log(results);
-        props.function("Search Results");
+        f("Search Results");
       });
   };
 
