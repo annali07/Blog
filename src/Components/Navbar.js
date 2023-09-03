@@ -7,9 +7,12 @@ const Navbar = ({head}) => {
   const [open2, setOpen2] = useState(false);
 
   const dropdownMenuAnimation = {
+    
     animationName: "downOut",
     animationDuration: "500ms",
     animationTimingFunction: "ease-in-out",
+    
+
     // animationFillMode: "forwards",
   };
 
@@ -64,13 +67,16 @@ const Navbar = ({head}) => {
             {`
               @keyframes downOut {
                 0% {
-                  transform: translateZ(100px) translateY(-10px);
+                  transform: translateZ(100px)
+                  translateX(-7px)  translateY(-10px);
                 }
                 70% {
-                  transform: translateZ(-10px) translateY(0px);
+                  transform: translateZ(-10px) 
+                  translateX(-7px)translateY(0px);
                 }
                 100% {
-                  transform: translateZ(0px) translateY(0px);
+                  transform: translateZ(0px) 
+                  translateX(-7px)translateY(0px);
                 }
               }
             `}

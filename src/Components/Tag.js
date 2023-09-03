@@ -1,7 +1,12 @@
-export default function Tag(){
+export default function Tag(props){
+  function tagHandler(){
+    console.log("clicked")
+  }
+
   return(
-    <div className="tagbar-tag">
-      C++ / 1 Entries
-    </div>
+    <button onClick={tagHandler}className="tagbar-tag">
+    <p>{props.tag}</p>
+    <p id="num">/ {1} </p>
+    </button>
   )
 }

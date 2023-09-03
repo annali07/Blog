@@ -1,14 +1,25 @@
+import React, { useEffect, useState } from "react";
 import Tag from "./Tag"
+import tagsData from "../json/tags.json";
+
 
 export default function TagBar(){
+  
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    setTags(tagsData.tags);
+  }, []);
+  
   return(
     <div className="tagbar">
       <div className="header">
         TAGS
       </div>
       <div className="body">
-        <Tag/> <Tag/>
-        <Tag/> <Tag/>
+      {tags.map((tag, index) => (
+          <Tag key={index} tag={tag} />
+        ))}
       </div>
     </div>
   )

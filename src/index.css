@@ -324,9 +324,10 @@ header a {
   width: 130px;
   overflow: hidden;
   height: 0;
-  transition: height 0.5s ease-in-out;
   background-color: rgba(255, 255, 255, 0.534);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* transform: translateX(-7px); */
+
 }
 
 .menu.open {
@@ -476,7 +477,8 @@ header a {
   padding-top: 0px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  column-gap: 10px;
+  row-gap: 15px;
 }
 .tagbar-tag {
   border: 1px solid rgba(146, 143, 198, 0.5);
@@ -488,6 +490,17 @@ header a {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: space-evenly;
+  transition: background 0.3s ease-in-out;
+}
+.tagbar-tag:hover{
+  background: #b4b1e841;
+  transition: background 0.3s ease-in-out;
+}
+/* .tagbar-tag p{
+  padding: 10px;
+  margin: none;
+} */
+.tagbar-tag #num{
+  font-family: "Klee One", cursive;
 }
