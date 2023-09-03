@@ -44,10 +44,23 @@
 
 .navmenu:hover::after{
   transform:scale(1,1)
+
 }
 
 .navmenu2:hover::after{
   transform:scale(1,1)
 }
-
+span{
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+span::after{
+  transform: rotateX(0deg);
+  transform-origin: center center;
+  color: aqua;
+}
+.navmenu:hover span::after,
+.navmenu2:hover span::after {
+  transform: rotateX(180deg);
+}
 

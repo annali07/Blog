@@ -3,7 +3,12 @@
 @import url(http://fonts.googleapis.com/earlyaccess/khyay.css);
 ::-webkit-scrollbar {
   width: 0.3vw; /* Width of the scrollbar */
-  background-color: rgba(200, 182, 214, 0.33); /* Background color of the scrollbar track */
+  background-color: rgba(
+    200,
+    182,
+    214,
+    0.33
+  ); /* Background color of the scrollbar track */
   /* display:none; */
   border: none;
   padding: none;
@@ -19,15 +24,12 @@
 /* Customize the scrollbar track when the mouse hovers over it */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #403e68;
-  
 }
 
 /* Customize the scrollbar track when it's in a "pressed" state (clicking and holding the thumb) */
 ::-webkit-scrollbar-thumb:active {
   background-color: #1f1e33;
 }
-
-
 
 body {
   margin: 0;
@@ -37,7 +39,7 @@ body {
   border: none;
 }
 
-body ::selection{
+body ::selection {
   background-color: rgba(181, 158, 199, 0.568);
 }
 
@@ -85,10 +87,6 @@ header a {
   padding: 5px 20px 0px 20px;
 }
 
-.drop-down {
-  font-size: 20px;
-}
-
 .quote {
   max-width: 1280px;
   height: 70px;
@@ -101,7 +99,7 @@ header a {
   position: relative;
 }
 
-.quote p{
+.quote p {
   font-size: 1rem;
 }
 
@@ -261,10 +259,10 @@ header a {
   background-color: #00000000;
   border: none;
   width: 100%;
-  transition: background-color 0.5s ease-in-out
+  transition: background-color 0.5s ease-in-out;
 }
 
-.post .tag button:hover{
+.post .tag button:hover {
   background-color: #2c2b49;
   transition: background-color 0.5s ease-in-out;
 }
@@ -280,14 +278,13 @@ header a {
   color: #683daf;
   font-family: Marvel;
   border: none;
-  background-color:#00000000;
+  background-color: #00000000;
   transition: color 0.5s;
 }
-.post .title:hover{
+.post .title:hover {
   color: #cfc2e5;
   transition: color 0.5s;
 }
-
 
 .post .body {
   padding: 30px;
@@ -372,7 +369,7 @@ header a {
   align-items: center;
 }
 
-.searchbar input{
+.searchbar input {
   border: 0px;
   height: 60%;
   padding: 0px;
@@ -384,34 +381,33 @@ header a {
   border-top-left-radius: 15px; /* Round the top-left corner */
   border-bottom-left-radius: 15px; /* Round the bottom-left corner */
 }
-.searchbar input:focus{
+.searchbar input:focus {
   border: 1px solid #928fc68c;
   outline: none;
 }
-.searchbar input::placeholder{
+.searchbar input::placeholder {
   font-family: Marvel;
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.342);
-  
 }
 .searchbar input::selection {
   background-color: rgba(200, 182, 214, 0.568);
   color: #000;
 }
-.searchbar button{
+.searchbar button {
   border: 0px;
   height: 60%;
-  background: #C8B6D6;
+  background: #c8b6d6;
   color: #fff;
   font-family: Marvel;
   width: 5rem;
   font-size: 1.4rem;
 }
-.searchbar button:hover{
+.searchbar button:hover {
   background: #b09bc0;
 }
 
-.footer{
+.footer {
   /* position: fixed; */
   bottom: 0;
   left: 0;
@@ -419,7 +415,7 @@ header a {
   height: 13rem;
   background-color: #1f1e33;
 }
-.footer .socialmedia{
+.footer .socialmedia {
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -427,20 +423,71 @@ header a {
   padding: 40px;
   padding-bottom: 30px;
 }
-.footer img{
+.footer img {
   padding: 5px;
 }
-.footer #youtube{
+.footer #youtube {
   padding-right: 25px;
 }
-.footer #github{
+.footer #github {
   padding-right: 10px;
 }
-.footer p{
+.footer p {
   color: #fff;
   font-family: Marvel;
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
   margin: 0;
+}
+
+.tagbar {
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 4px 10px 2px rgba(146, 143, 198, 0.5);
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.tagbar .header {
+  font-family: Marvel;
+  font-size: 1.7rem;
+  font-style: normal;
+  /* font-weight: 700; */
+  line-height: normal;
+  color: #928fc6;
+  padding: 25px;
+  padding-top: 18px;
+  position: relative;
+}
+
+.tagbar .header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 21px;
+  width: 54px;
+  height: 3px;
+  background-color: #928fc6;
+  border-radius: 10px;
+  transform: translateX(23px);
+}
+.tagbar .body {
+  padding: 22px;
+  padding-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.tag {
+  border: 1px solid rgba(146, 143, 198, 0.5);
+  background: #fff;
+  font-family: Marvel;
+  color: #77759c;
+  width: 8.2rem;
+  height: 2.25rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }

@@ -1,7 +1,6 @@
 import timestamp from "../images/Timestamp.png"
 import visit from "../images/VisitCount.png"
 import comment from "../images/CommentCount.png"
-import {Button} from 'react'
 
 export default function Post() {
 

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Namecard from "./Components/Namecard";
 import Searchbar from "./Components/Searchbar";
 import Footer from "./Components/Footer";
+import TagBar from "./Components/TagBar";
 
 function App() {
   const [heading, setHeading] =useState("Home")
@@ -36,6 +37,8 @@ function App() {
             <Namecard />
             <div style={{padding: '40px'}}/>
             <Searchbar f={getHeading}/>
+            <div style={{paddingBottom: '40px'}}/>
+            <TagBar/>
           </div>
         </div>
         <Footer/>
