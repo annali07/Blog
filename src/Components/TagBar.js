@@ -18,7 +18,7 @@ export default function TagBar(){
       </div>
       <div className="body">
       {tags.map((tag, index) => (
-          <Tag key={index} tag={tag} />
+          <Tag key={index} topic={tag.topic} frequency={tag.frequency} />
         ))}
       </div>
     </div>

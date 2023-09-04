@@ -1,5 +1,5 @@
+import Pagination from "../Components/Pagination";
 import Post from "../Components/Post";
-import { useEffect } from "react";
 //renders a json file. After search method, renders the filtered json file. 
 const Home =() =>{
 
@@ -7,6 +7,7 @@ const Home =() =>{
     <div className="home">
       <Post/>
       <Post/>
+      <Pagination/>
     </div>
   )
 }

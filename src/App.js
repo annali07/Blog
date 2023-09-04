@@ -11,7 +11,7 @@ import TagBar from "./Components/TagBar";
 function App() {
   const [heading, setHeading] =useState("Home")
 
-
+  
   const getHeading=(e)=>{
     setHeading(e)
      

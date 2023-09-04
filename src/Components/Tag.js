@@ -5,8 +5,8 @@ export default function Tag(props){
 
   return(
     <button onClick={tagHandler}className="tagbar-tag">
-    <p>{props.tag}</p>
-    <p id="num">/ {1} </p>
+    <p>{props.topic}</p>
+    <p id="num">/ {props.frequency} </p>
     </button>
   )
 }

@@ -1,3 +1,11 @@
 {
-  "tags":["C++","JAVA","React","C#","Unity","UE","Python"]
+  "tags": [
+    { "topic": "C++", "frequency": 2 },
+    { "topic": "JAVA", "frequency": 7 },
+    { "topic": "React", "frequency": 5 },
+    { "topic": "C#", "frequency": 9 },
+    { "topic": "Unity", "frequency": 4 },
+    { "topic": "UE", "frequency": 8 },
+    { "topic": "Python", "frequency": 6 }
+  ]
 }
