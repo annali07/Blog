@@ -8,6 +8,8 @@ import Searchbar from "./Components/Searchbar";
 import Footer from "./Components/Footer";
 import TagBar from "./Components/TagBar";
 
+
+
 function App() {
   const [heading, setHeading] =useState("Home")
 
@@ -32,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/> } />
             <Route path="/about" element={<About/>} />
+            {/* <Route path="/home/posts/:id" element={<SinglePost/>} /> */}
           </Routes>
           <div className="sidebar">
             <Namecard />

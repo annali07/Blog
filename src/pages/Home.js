@@ -5,8 +5,8 @@ const Home =() =>{
 
   return(
     <div className="home">
-      <Post/>
-      <Post/>
+      <Post id="1"/>
+      <Post id="2"/>
       <Pagination/>
     </div>
   )
