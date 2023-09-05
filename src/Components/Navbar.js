@@ -1,40 +1,37 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useState } from "react";
+import tagsData from "../json/tags.json";
 
-const Navbar = ({head}) => {
+const Navbar = ({ head }) => {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
+  const tags = tagsData.tags;
 
   const dropdownMenuAnimation = {
-    
     animationName: "downOut",
     animationDuration: "500ms",
     animationTimingFunction: "ease-in-out",
-    
 
     // animationFillMode: "forwards",
   };
 
-  
-  function onPress(){
-   head("Home")
+  function onPress() {
+    head("Home");
   }
-  function onPress2(){
-    head("About")
+  function onPress2() {
+    head("About");
   }
-  function onPress3(){
-    head("Journals")
+  function onPress3() {
+    head("Journals");
   }
-  function onPress4(){
-    head("Books")
+  function onPress4() {
+    head("Books");
   }
-
 
   return (
     <header>
       <div className="container">
-
         <div className="container1">
           <Link to="/" style={{ color: "black" }} onClick={onPress}>
             <h1 className={styles.mainmenu}>Nana♡Blog</h1>
@@ -60,11 +57,12 @@ const Navbar = ({head}) => {
               className={`menu ${open ? "open" : ""}`}
               style={open ? dropdownMenuAnimation : {}}
             >
-              <button>Menu 1</button>
-              <button>Menu 2</button>
+              {tags.map((tag, index) => (
+                <button key={index}>{tag.topic}</button>
+              ))}
             </div>
             <style>
-            {`
+              {`
               @keyframes downOut {
                 0% {
                   transform: translateZ(100px)
@@ -97,7 +95,9 @@ const Navbar = ({head}) => {
               className={`menu ${open2 ? "open2" : ""}`}
               style={open2 ? dropdownMenuAnimation : {}}
             >
-              <button className="button"  onClick={onPress3}>Journals</button>
+              <button className="button" onClick={onPress3}>
+                Journals
+              </button>
               <button onClick={onPress4}>Books</button>
             </div>
             <style>

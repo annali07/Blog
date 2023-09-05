@@ -8,7 +8,7 @@ import Searchbar from "./Components/Searchbar";
 import Footer from "./Components/Footer";
 import TagBar from "./Components/TagBar";
 import SinglePost from "./Components/SinglePost";
-
+import HomeHeading from "./Components/HomeHeading";
 
 function App() {
   const [heading, setHeading] =useState("Home")
@@ -30,7 +30,11 @@ function App() {
         <Header f={getHeading} />
        
         <div className="quote">
-          <p className="p1">-------{heading}{postHeading && ` / ${postHeading}`}</p>
+          {/* <p className="p1">-------{heading}{postHeading && ` / ${postHeading}`}</p> */}
+          
+          <HomeHeading heading={heading} postHeading={postHeading} />
+          
+          
           <p className="p2">在这道路的前方，大概就是，美好的每一天。</p>
         </div>
 
