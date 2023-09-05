@@ -12,12 +12,16 @@ import SinglePost from "./Components/SinglePost";
 
 function App() {
   const [heading, setHeading] =useState("Home")
-
+  const [postHeading, setPostHeading] = useState(null);
   
   const getHeading=(e)=>{
     setHeading(e)
      
   }
+  const handlePostData = (data) => {
+    // Update the state with the data received from SinglePost
+    setPostHeading(data);
+  };
 
 
   return (
@@ -26,7 +30,7 @@ function App() {
         <Header f={getHeading} />
        
         <div className="quote">
-          <p className="p1">-------{heading}</p>
+          <p className="p1">-------{heading}{postHeading && ` / ${postHeading}`}</p>
           <p className="p2">在这道路的前方，大概就是，美好的每一天。</p>
         </div>
 
@@ -34,7 +38,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/> } />
             <Route path="/about" element={<About/>} />
-            <Route path="/posts/:id" element={<SinglePost/>} />
+            <Route path="/posts/:id" element={<SinglePost onPostData={handlePostData}/>} />
           </Routes>
           <div className="sidebar">
             <Namecard />

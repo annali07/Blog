@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { useParams, useLocation, json } from "react-router-dom";
 
-const SinglePost = () => {
+const SinglePost = (props) => {
   const { id } = useParams();
   const location = useLocation();
   const jsonData = location.state ? location.state.jsonData : null;
+  useEffect(()=>{
+    props.onPostData(`Post  ${id}`)
+  })
 
   if (!jsonData) {
     // Handle the case where jsonData is not available
