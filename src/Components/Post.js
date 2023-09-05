@@ -10,6 +10,7 @@ export default function Post({id}) {
   
   return (
     <div className="post">
+      
       <div className="titlebar">
         <div className="tagline"></div>
         <div className="tag">
