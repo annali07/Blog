@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
 @import url(http://fonts.googleapis.com/earlyaccess/khyay.css);
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 
 ::-webkit-scrollbar {
   width: 0.3vw; /* Width of the scrollbar */
@@ -229,7 +229,7 @@ header a {
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 .post .titlebar {
   display: flex;
@@ -273,6 +273,7 @@ header a {
 }
 
 .post .title {
+  text-decoration: none;
   font-size: 1.6rem;
   width: 80%;
   padding-left: 20px;
@@ -320,6 +321,40 @@ header a {
   padding-right: 30px;
 }
 
+/* Single Post */
+.single-post {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(2, 0, 114, 0.5);
+  min-height: 1000px;
+  margin-bottom: 50px;
+  width: 70%;
+  padding: 0px;
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 100px;
+}
+.single-post .title {
+  color: #683daf;
+  text-align: center;
+  font-family: Marvel;
+  font-size: 2.5rem;
+  padding: 50px;
+  padding-bottom: 20px;
+}
+.single-post .published-date {
+  color: rgba(0, 0, 0, 0.31);
+  font-family: Marvel;
+  font-size: 1.625rem;
+  text-align: center;
+}
+.single-post .body {
+  color: rgba(0, 0, 0, 0.69);
+  font-family: Marvel;
+  font-size: 1.4rem;
+  padding: 65px
+}
+
 /* dropdown  */
 .menu {
   position: absolute;
@@ -332,7 +367,6 @@ header a {
   background-color: rgba(255, 255, 255, 0.534);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   /* transform: translateX(-7px); */
-
 }
 
 .menu.open {
@@ -498,7 +532,7 @@ header a {
   justify-content: space-evenly;
   transition: background 0.3s ease-in-out;
 }
-.tagbar-tag:hover{
+.tagbar-tag:hover {
   background: #b4b1e841;
   transition: background 0.3s ease-in-out;
 }
@@ -506,27 +540,27 @@ header a {
   padding: 10px;
   margin: none;
 } */
-.tagbar-tag #num{
+.tagbar-tag #num {
   font-family: "Klee One", cursive;
 }
-.pagination{
+.pagination {
   display: flex;
   justify-content: center;
 }
-.pagination-button{
+.pagination-button {
   border: none;
   background: none;
   font-size: 1.5rem;
   font-family: Marvel;
   padding: 15px;
-  color: #471A92 ;
+  color: #471a92;
   transition: background 0.3s ease-in-out;
 }
-.pagination-button#arrow{
-  font-family: 'Libre Baskerville', serif;
+.pagination-button#arrow {
+  font-family: "Libre Baskerville", serif;
   font-size: 1.3rem;
 }
-.pagination-button:hover{
+.pagination-button:hover {
   background: #b4b1e841;
   transition: background 0.3s ease-in-out;
 }

@@ -7,7 +7,7 @@ import Namecard from "./Components/Namecard";
 import Searchbar from "./Components/Searchbar";
 import Footer from "./Components/Footer";
 import TagBar from "./Components/TagBar";
-
+import SinglePost from "./Components/SinglePost";
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/> } />
             <Route path="/about" element={<About/>} />
-            {/* <Route path="/home/posts/:id" element={<SinglePost/>} /> */}
+            <Route path="/posts/:id" element={<SinglePost/>} />
           </Routes>
           <div className="sidebar">
             <Namecard />

@@ -1,15 +1,11 @@
 import timestamp from "../images/Timestamp.png"
 import visit from "../images/VisitCount.png"
 import comment from "../images/CommentCount.png"
-
 import mockJson from '../json/posts.json'
-export default function Post() {
-  const jsonData = mockJson[0]
+import { Link } from "react-router-dom"
 
-  function onClickHandler(){
-    console.log("this is title")
-  }
-  
+export default function Post({id}) {
+  const jsonData = mockJson[0]
   const body = jsonData.body.substring(0, 250);
   
   return (
@@ -19,7 +15,10 @@ export default function Post() {
         <div className="tag">
         <button>{jsonData.majTag}</button>
         </div>
-        <button onClick={onClickHandler} className="title">{jsonData.title}</button>
+        <Link className="title" to={`/posts/${id}`} state={{ jsonData }}>
+          {console.log({jsonData})}
+        <p>{jsonData.title}</p>
+      </Link>
       </div>
       <div className="body">{body}...</div>
      <div className="data-wrapper">
