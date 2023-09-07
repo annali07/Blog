@@ -18,6 +18,17 @@ export default function Comment(){
           body={comment.body}
         />
       ))}
+      <div className="comment-input">
+        <div className="title">New Comment</div>
+        <div className="inputbox">
+          <div className="fill"></div>
+          <input></input>
+          <div className="fill"></div>
+        </div>
+        <div className="submit">
+          <button>Comment</button>
+        </div>
+      </div>
   </div>
   )
 }
