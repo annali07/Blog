@@ -22,7 +22,7 @@ export default function Comment(){
         <div className="title">New Comment</div>
         <div className="inputbox">
           <div className="fill"></div>
-          <input></input>
+          <textarea ></textarea>
           <div className="fill"></div>
         </div>
         <div className="submit">
