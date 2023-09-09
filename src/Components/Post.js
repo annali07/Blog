@@ -9,7 +9,7 @@ export default function Post({id}) {
   const body = jsonData.body.substring(0, 250);
   
   return (
-    <div className="post">
+    <div className="post" >
       
       <div className="titlebar">
         <div className="tagline"></div>

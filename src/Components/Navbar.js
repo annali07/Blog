@@ -12,7 +12,6 @@ const Navbar = ({ head }) => {
     animationName: "downOut",
     animationDuration: "500ms",
     animationTimingFunction: "ease-in-out",
-
     // animationFillMode: "forwards",
   };
 
@@ -103,17 +102,17 @@ const Navbar = ({ head }) => {
             <style>
               {`
               @keyframes downOut {
-            0% {
-              transform: translateZ(200px) translateY(-10px);
-            }
-            70% {
-              transform: translateZ(-10px) translateY(0px);
-            }
-            100% {
-              transform: translateZ(0px) translateY(0px);
-            }
-          }
-        `}
+                0% {
+                  transform: translateZ(200px) translateX(-7px) translateY(-10px);
+                }
+                70% {
+                  transform: translateZ(-10px) translateX(-7px) translateY(0px);
+                }
+                100% {
+                  transform: translateZ(0px) translateX(-7px) translateY(0px);
+                }
+              }
+              `}
             </style>
           </div>
 
